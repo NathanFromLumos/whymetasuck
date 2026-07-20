@@ -1,7 +1,7 @@
 # Why Meta Suck — The Meta Algorithm Explained
 
 Standalone static site for the Meta algorithm visualiser, previously shipped as part of the
-`lumos-tools` WordPress plugin. Lives at https://whymetasuck.nathanknowsnothing.co.uk —
+`lumos-tools` WordPress plugin. Lives at https://whymetasucks.halfpipelabs.co.uk —
 deployed by cloning this repo on the server (see [DEPLOY.md](DEPLOY.md)).
 
 ## Structure

@@ -25,7 +25,7 @@ lines from an existing vhost (see the comment at the top of `deploy/nginx.conf`)
 
 ```apache
 <VirtualHost *:80>
-    ServerName whymetasuck.nathanknowsnothing.co.uk
+    ServerName whymetasucks.halfpipelabs.co.uk
     DocumentRoot /var/www/whymetasuck
     <Directory /var/www/whymetasuck>
         Require all granted
@@ -36,11 +36,17 @@ lines from an existing vhost (see the comment at the top of `deploy/nginx.conf`)
 
 ## 3. DNS (Cloudflare)
 
-Add a record on nathanknowsnothing.co.uk:
+`whymetasucks.halfpipelabs.co.uk` already resolves via the existing wildcard/
+catch-all on halfpipelabs.co.uk (it currently hits the server's default vhost,
+which 301s to the apex). If you'd rather have an explicit record, add on
+halfpipelabs.co.uk:
 
 | Type | Name | Content | Proxy |
 |------|------|---------|-------|
-| A | `whymetasuck` | your server's IP | Proxied (orange) |
+| A | `whymetasucks` | the server's IP | Proxied (orange) |
+
+Either way, once the nginx vhost from step 2 is in place it takes precedence
+over the catch-all redirect and the site goes live.
 
 ## 4. Updates
 
